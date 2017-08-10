@@ -8,13 +8,19 @@
 <body>
   <body ng-app="my-app" ng-controller="contacts-controller">
   <h1>Address Book</h1>
-  Hello {{name}}.
-  <p>List of Countries with locale: </p>
+  Hello {{lmao}}.
+  <p>Contacts:</p>
   <ul>
       <li ng-repeat = "record in records">
          {{ 'Name: ' + record.Name + ', Number: ' + record.Phone }}
       </li>
    </ul>
+ <div>
+        <input type="text" ng-model="input" placeholder="Enter Your Name">
+        <input type="text" ng-model="input2" placeholder="Enter Your Number">
+        <button type="submit" ng-click="add()">Add</button>
+    </div>
+
 </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular.min.js'></script>
 
