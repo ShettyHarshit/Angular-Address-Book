@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Address Book Angular App</title>
+</head>
+
+<body>
+  <body ng-app="my-app" ng-controller="contacts-controller">
+  <h1>Address Book</h1>
+  Hello {{name}}.
+  <p>List of Countries with locale: </p>
+  <ul>
+      <li ng-repeat = "record in records">
+         {{ 'Name: ' + record.Name + ', Number: ' + record.Phone }}
+      </li>
+   </ul>
+</body>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
