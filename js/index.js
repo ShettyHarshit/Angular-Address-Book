@@ -12,6 +12,13 @@ var app = angular.module('my-app', []);
 //         templateUrl : "paris.htm"
 //     });
 // });  
+app.directive('ContactsList', function() {
+  return {
+    restrict: 'E',
+    template: '<div>Hii</div>'
+  }
+})
+
 
 app.controller("contacts-controller", function($scope) {
   $scope.lmao = "world";

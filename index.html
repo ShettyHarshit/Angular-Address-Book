@@ -25,6 +25,15 @@
         <button type="submit" ng-click="add()">Add</button>
     </div>
 
+    <contacts-list></contacts-list>
+
+    <div>
+    	<input type="text" ng-model="contactSearch" placeholder="Search Contacts">
+    	<div ng-repeat = "record in records | filter: contactSearch">
+    		{{ 'Name: ' + record.Name + ', Age: ' + record.Age + ', Number: ' + record.Phone + ', Location: ' + record.Address }}
+    	</div>
+    </div>
+
 </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular.min.js'></script>
 
