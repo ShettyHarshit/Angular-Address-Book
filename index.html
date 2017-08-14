@@ -10,10 +10,17 @@
   <h1>Address Book</h1>
   Hello {{lmao}}.
   <p>Contacts:</p>
-  <ul>
+  <!-- <ul>
       <li ng-repeat = "record in records">
          {{ 'Name: ' + record.Name + ', Age: ' + record.Age + ', Number: ' + record.Phone + ', Location: ' + record.Address }}
          <img ng-src="{{ record.Link }}" />`
+      </li>
+   </ul> -->
+
+   <ul>
+      <li ng-repeat = "todo in todos track by $index">
+         {{ 'Name: ' + todo.Name + ', Age: ' + todo.Age + ', Number: ' + todo.Phone + ', Location: ' + todo.Address }}
+         <img ng-src="{{ todo.Link }}" />`
       </li>
    </ul>
  <div>
@@ -29,10 +36,12 @@
 
     <div>
     	<input type="text" ng-model="contactSearch" placeholder="Search Contacts">
-    	<div ng-repeat = "record in records | filter: contactSearch">
-    		{{ 'Name: ' + record.Name + ', Age: ' + record.Age + ', Number: ' + record.Phone + ', Location: ' + record.Address }}
+    	<div ng-repeat = "todo in todos | filter: contactSearch">
+    		{{ 'Name: ' + todo.Name + ', Age: ' + todo.Age + ', Number: ' + todo.Phone + ', Location: ' + todo.Address }}
     	</div>
     </div>
+
+
 
 </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular.min.js'></script>

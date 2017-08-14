@@ -6,7 +6,7 @@
 - [x] Add Contact
 - [ ] Edit contacts?
 - [x] Search Contacts
-- [ ] Store in LocalStorage
+- [x] Store in LocalStorage
 - [ ] Routing
 - [ ] Using Filters?
 - [ ] Google Map on Address?
