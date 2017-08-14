@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Address Book Angular App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <body ng-app="my-app" ng-controller="contacts-controller">
   <h1>Address Book</h1>
   Hello {{lmao}}.
-  <p>Contacts:</p>
+  <h3>Contacts:</h3>
   <!-- <ul>
       <li ng-repeat = "record in records">
          {{ 'Name: ' + record.Name + ', Age: ' + record.Age + ', Number: ' + record.Phone + ', Location: ' + record.Address }}
@@ -17,12 +20,33 @@
       </li>
    </ul> -->
 
-   <ul>
+   <!-- <ul>
       <li ng-repeat = "todo in todos track by $index">
          {{ 'Name: ' + todo.Name + ', Age: ' + todo.Age + ', Number: ' + todo.Phone + ', Location: ' + todo.Address }}
          <img ng-src="{{ todo.Link }}" />`
       </li>
-   </ul>
+   </ul> -->
+
+<div class="row imgfilter">
+        <div class="col s12 m6 l3" ng-repeat = "todo in todos track by $index">
+          <div class="card">
+            <div class="card-image">
+              <img ng-src="{{ todo.Link }}" />
+              <span class="card-title text-darken-2">{{todo.Name}}</span>
+            </div>
+            <div class="card-content">
+              <p>{{todo.Age}}</p>
+              <p>{{todo.Phone}}</p>
+              <p>{{todo.Address}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
  <div>
         <input type="text" ng-model="input" placeholder="Enter Your Name">
         <input type="text" ng-model="input4" placeholder="Enter Your Age">
