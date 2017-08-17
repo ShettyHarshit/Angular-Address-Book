@@ -90,11 +90,18 @@ $scope.add = function() {
     $scope.input4 = '';
     $scope.input5 = '';
     localStorage.setItem('todos', JSON.stringify($scope.todos));
-};
+}
+
 $scope.editRecord = function(todo) {
     $scope.editEntry = true;
     $scope.currentRecord = todo;
 
+}
+
+$scope.saveRecord = function() {
+    localStorage.setItem('todos', JSON.stringify($scope.todos));
+    $scope.currentRecord = {};
+    $scope.editEntry = false;
 };
 
 });

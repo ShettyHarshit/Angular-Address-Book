@@ -25,12 +25,13 @@
          <img ng-src="{{ todo.Link }}" />`
       </li>
    </ul> -->
-<div ng-if="editRecord">
+<div ng-if="editEntry">
 <input type="text" ng-model="currentRecord.Name">
         <input type="text" ng-model="currentRecord.Age" placeholder="Enter Your Age">
         <input type="text" ng-model="currentRecord.Phone" placeholder="Enter Your Number">
         <input type="text" ng-model="currentRecord.Address" placeholder="Enter Your Location">
-        <input type="text" ng-model="" placeholder="Enter Your Image Link">
+        <input type="text" ng-model="currentRecord.Link" placeholder="Enter Your Image Link">
+        <a class="waves-effect waves-light btn" ng-click="saveRecord()">Save</a>
         </div>
 
 
