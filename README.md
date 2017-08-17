@@ -4,7 +4,8 @@
 
 - [x] Sample Contacts
 - [x] Add Contact
-- [ ] Edit contacts?
+- [x] Edit contacts
+- [x] Delete contacts
 - [x] Search Contacts
 - [x] Store in LocalStorage
 - [ ] Routing
