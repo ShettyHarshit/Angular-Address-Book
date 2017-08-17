@@ -58,28 +58,29 @@ $scope.todos = (localStorage.getItem('todos')!==null) ? JSON.parse($scope.saved)
     "Name" : "Harshit Shetty",
     "Age" : "20",
     "Phone" : "+91 9768 XXX XXX",
-    "Address" : "Me Kyu batau?",
+    "Address" : "Oshiwara",
     "Link" : "https://media1.popsugar-assets.com/files/thumbor/Dut3rlQY7ZXRivu3TvfmnQmlFtQ/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/02/07/963/n/1922283/b01db4d1_edit_img_image_34626342_1438031640_718/i/Jaime-Lannister-GIFs.jpg"
 },{
     "Name" : "Amar Pendhari",
     "Age" : "20",
     "Phone" : "+91 9768 XXX XXX",
-    "Address" : "Me Kyu batau?",
+    "Address" : "BackRoad",
     "Link" : "http://www.meckmin.org/wp-content/uploads/2015/08/person-placeholder-608x608.jpg"
 },{
     "Name" : "Abhijeet Shetty",
     "Age" : "20",
     "Phone" : "+91 9768 XXX XXX",
-    "Address" : "Me Kyu batau?",
+    "Address" : "Inorbit",
     "Link" : "http://www.meckmin.org/wp-content/uploads/2015/08/person-placeholder-608x608.jpg"
 },{
     "Name" : "Adit Arora",
     "Age" : "20",
     "Phone" : "+91 9768 XXX XXX",
-    "Address" : "Me Kyu batau?",
+    "Address" : "Boisar",
     "Link" : "http://www.meckmin.org/wp-content/uploads/2015/08/person-placeholder-608x608.jpg"
 }
 ];
+
 localStorage.setItem('todos', JSON.stringify($scope.todos));
 
 $scope.add = function() {

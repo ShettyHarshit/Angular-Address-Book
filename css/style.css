@@ -1,3 +1,12 @@
-.imgfilter img{
-  
+body {  
+background-image: url('http://hdblackwallpaper.com/wallpaper/2015/05/black-desktop-wallpaper-22-desktop-background.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+}
+
+.holder{
+  width: 90%;
+  margin: 40px;
 }
