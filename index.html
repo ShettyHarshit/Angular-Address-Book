@@ -11,7 +11,6 @@
 
   <body ng-app="my-app" ng-controller="contacts-controller">
   <h1>Address Book</h1>
-  Hello {{lmao}}.
   <h3>Contacts:</h3>
   <!-- <ul>
       <li ng-repeat = "record in records">
@@ -26,6 +25,14 @@
          <img ng-src="{{ todo.Link }}" />`
       </li>
    </ul> -->
+<div ng-if="editRecord">
+<input type="text" ng-model="currentRecord.Name">
+        <input type="text" ng-model="currentRecord.Age" placeholder="Enter Your Age">
+        <input type="text" ng-model="currentRecord.Phone" placeholder="Enter Your Number">
+        <input type="text" ng-model="currentRecord.Address" placeholder="Enter Your Location">
+        <input type="text" ng-model="" placeholder="Enter Your Image Link">
+        </div>
+
 
 <div class="row imgfilter">
         <div class="col s12 m6 l3" ng-repeat = "todo in todos track by $index">
@@ -40,11 +47,22 @@
               <p>{{todo.Address}}</p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a class="waves-effect waves-light btn" ng-click="editRecord(todo)">Edit</a>
             </div>
           </div>
         </div>
       </div>
+    <div class="row">
+    <!-- <div class="col l3" ng-repeat = "todo in todos track by $index">
+    
+        <input type="text" ng-model="xinput" value="{{todo.Name}}">
+        <input type="text" ng-model="xinput4" placeholder="Enter Your Age">
+        <input type="text" ng-model="xinput2" placeholder="Enter Your Number">
+        <input type="text" ng-model="xinput3" placeholder="Enter Your Location">
+        <input type="text" ng-model="xinput5" placeholder="Enter Your Image Link">
+        </div>
+    </div> -->
+
 
 
  <div>

@@ -91,4 +91,10 @@ $scope.add = function() {
     $scope.input5 = '';
     localStorage.setItem('todos', JSON.stringify($scope.todos));
 };
+$scope.editRecord = function(todo) {
+    $scope.editEntry = true;
+    $scope.currentRecord = todo;
+
+};
+
 });
