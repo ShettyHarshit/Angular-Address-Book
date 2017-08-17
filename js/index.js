@@ -104,4 +104,12 @@ $scope.saveRecord = function() {
     $scope.editEntry = false;
 };
 
+$scope.deleteRecord = function(currentRecord) {
+    var index = $scope.todos.indexOf("currentRecord");
+    $scope.todos.splice(index, 1)
+    localStorage.setItem('todos', JSON.stringify($scope.todos));
+    $scope.currentRecord = {};
+    $scope.editEntry = false;
+};
+
 });
