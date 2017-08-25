@@ -29,5 +29,11 @@ app.directive('sample', function() {
     restrict: 'E',
     templateUrl: 'sections/search.html'
 }
+}),
+app.directive('foot', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'sections/footer.html'
+}
 });
 
