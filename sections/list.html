@@ -1,4 +1,4 @@
-<h1>Address Book</h1>
+<h1 class="whitetxt">Address Book</h1>
 <section id="EditCont">
 	<div ng-if="editEntry" class="card">
 		<div class="card-content">
@@ -15,9 +15,11 @@
 				<a class="waves-effect waves-light btn" ng-click="deleteRecord(currentRecord)">Delete</a>
 			</div>
 		</div>
+		</div>
+
 	</section>
 
-	<h3>Contacts:</h3>
+	<h3 class="whitetxt">Contacts:</h3>
 	<div class="row imgfilter">
 		<div class="col s12 m6 l3" ng-repeat = "todo in todos track by $index">
 			<div class="card">
