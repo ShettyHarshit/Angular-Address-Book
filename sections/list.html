@@ -1,0 +1,38 @@
+<h1>Address Book</h1>
+<section id="EditCont">
+	<div ng-if="editEntry" class="card">
+		<div class="card-content">
+			<h3>Edit Contact:</h3>
+			<div class="row">
+				<div class="col s12 m6 l4"><input type="text" ng-model="currentRecord.Name"></div>
+				<div class="col s12 m6 l4"><input type="text" ng-model="currentRecord.Age" placeholder="Enter Your Age"></div>
+				<div class="col s12 m6 l4"><input type="text" ng-model="currentRecord.Phone" placeholder="Enter Your Number"></div>
+				<div class="row">
+					<div class="col s12 m6 l6"><input type="text" ng-model="currentRecord.Address" placeholder="Enter Your Location"></div>
+					<div class="col s12 m6 l6"><input type="text" ng-model="currentRecord.Link" placeholder="Enter Your Image Link"></div>
+				</div>
+				<a class="waves-effect waves-light btn" ng-click="saveRecord()">Save</a>
+				<a class="waves-effect waves-light btn" ng-click="deleteRecord(currentRecord)">Delete</a>
+			</div>
+		</div>
+	</section>
+
+	<h3>Contacts:</h3>
+	<div class="row imgfilter">
+		<div class="col s12 m6 l3" ng-repeat = "todo in todos track by $index">
+			<div class="card">
+				<div class="card-image">
+					<img ng-src="{{ todo.Link }}" />
+					<span class="card-title text-darken-2">{{todo.Name}}</span>
+				</div>
+				<div class="card-content">
+					<p>{{todo.Age}}</p>
+					<p>{{todo.Phone}}</p>
+					<p>{{todo.Address}}</p>
+				</div>
+				<div class="card-action">
+					<a class="waves-effect waves-light btn" ng-click="editRecord(todo)" href="#EditCont">Edit</a>
+				</div>
+			</div>
+		</div>
+	</div>

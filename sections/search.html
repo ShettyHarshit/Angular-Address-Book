@@ -1,0 +1,11 @@
+<div>
+    <div class="card">
+        <div class="card-content">
+            <h3>Search Contacts:</h3>
+            <input type="text" ng-model="contactSearch" placeholder="Search Contacts">
+            <div ng-repeat = "todo in todos | filter: contactSearch track by $index">
+                {{ 'Name: ' + todo.Name + ', Age: ' + todo.Age + ', Number: ' + todo.Phone + ', Location: ' + todo.Address }}
+            </div>
+        </div>
+    </div>
+</div>

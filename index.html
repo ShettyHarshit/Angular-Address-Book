@@ -10,110 +10,17 @@
 <body>
 
   <body ng-app="my-app" ng-controller="contacts-controller">
-  <div class="container holder">
-    <h1>Address Book</h1>
-    
-  <!-- <ul>
-      <li ng-repeat = "record in records">
-         {{ 'Name: ' + record.Name + ', Age: ' + record.Age + ', Number: ' + record.Phone + ', Location: ' + record.Address }}
-         <img ng-src="{{ record.Link }}" />`
-      </li>
-    </ul> -->
-
-   <!-- <ul>
-      <li ng-repeat = "todo in todos track by $index">
-         {{ 'Name: ' + todo.Name + ', Age: ' + todo.Age + ', Number: ' + todo.Phone + ', Location: ' + todo.Address }}
-         <img ng-src="{{ todo.Link }}" />`
-      </li>
-    </ul> -->
-    <section id="EditCont">
-    <div ng-if="editEntry" class="card">
-    <div class="card-content">
-    <h3>Edit Contact:</h3>
-      <div class="row">
-      <div class="col s12 m6 l4"><input type="text" ng-model="currentRecord.Name"></div>
-      <div class="col s12 m6 l4"><input type="text" ng-model="currentRecord.Age" placeholder="Enter Your Age"></div>
-      <div class="col s12 m6 l4"><input type="text" ng-model="currentRecord.Phone" placeholder="Enter Your Number"></div>
-      <div class="row">
-      <div class="col s12 m6 l6"><input type="text" ng-model="currentRecord.Address" placeholder="Enter Your Location"></div>
-      <div class="col s12 m6 l6"><input type="text" ng-model="currentRecord.Link" placeholder="Enter Your Image Link"></div>
-      </div>
-      <a class="waves-effect waves-light btn" ng-click="saveRecord()">Save</a>
-      <a class="waves-effect waves-light btn" ng-click="deleteRecord(currentRecord)">Delete</a>
-      </div>
+    <div class="container holder">      
+      <list></list>
+      <add></add>
+      <sample></sample>
     </div>
-    </section>
-
-    <h3>Contacts:</h3>
-    <div class="row imgfilter">
-      <div class="col s12 m6 l3" ng-repeat = "todo in todos track by $index">
-        <div class="card">
-          <div class="card-image">
-            <img ng-src="{{ todo.Link }}" />
-            <span class="card-title text-darken-2">{{todo.Name}}</span>
-          </div>
-          <div class="card-content">
-            <p>{{todo.Age}}</p>
-            <p>{{todo.Phone}}</p>
-            <p>{{todo.Address}}</p>
-          </div>
-          <div class="card-action">
-            <a class="waves-effect waves-light btn" ng-click="editRecord(todo)" href="#EditCont">Edit</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-    <!-- <div class="col l3" ng-repeat = "todo in todos track by $index">
-    
-        <input type="text" ng-model="xinput" value="{{todo.Name}}">
-        <input type="text" ng-model="xinput4" placeholder="Enter Your Age">
-        <input type="text" ng-model="xinput2" placeholder="Enter Your Number">
-        <input type="text" ng-model="xinput3" placeholder="Enter Your Location">
-        <input type="text" ng-model="xinput5" placeholder="Enter Your Image Link">
-        </div>
-      </div> -->
-
-
-      
-      <div>
-      <div class="card">
-    <div class="card-content">
-      <h3>Add Contact:</h3>
-      <div class="row">
-      <div class="col s12 m6 l4"><input type="text" ng-model="input" placeholder="Enter Your Name"></div>
-        <div class="col s12 m6 l4"><input type="text" ng-model="input4" placeholder="Enter Your Age"></div>
-        <div class="col s12 m6 l4"><input type="text" ng-model="input2" placeholder="Enter Your Number"></div>
-        </div>
-        <div class="row">
-      <div class="col s12 m6 l6"><input type="text" ng-model="input3" placeholder="Enter Your Location"></div>
-        <div class="col s12 m6 l6"><input type="text" ng-model="input5" placeholder="Enter Your Image Link"></div>
-        </div>
-        <a class="waves-effect waves-light btn" ng-click="add()">Add</a>
-        </div>
-        </div>
-      </div>
-
-      <contacts-list></contacts-list>
-
-      <div>
-      <div class="card">
-    <div class="card-content">
-      <h3>Search Contacts:</h3>
-       <input type="text" ng-model="contactSearch" placeholder="Search Contacts">
-       <div ng-repeat = "todo in todos | filter: contactSearch track by $index">
-        {{ 'Name: ' + todo.Name + ', Age: ' + todo.Age + ', Number: ' + todo.Phone + ', Location: ' + todo.Address }}
-      </div>
-      </div>
-      </div>
-    </div>
-
-
-</div>
   </body>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.0rc3/angular.min.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="recordCtrl.js"></script>
 
 </body>
 </html
